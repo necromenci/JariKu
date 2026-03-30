@@ -8,46 +8,52 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #0f172a;
     color: white;
 }
 
-header {
-   <img src="massage1.jpg" style="width:80%; max-width:500px; border-radius:15px; margin-top:20px;">
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('massage1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #0f172a, #1e293b);
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.6);
 }
 
-header h1 {
-    font-size: 40px;
+.hero h1 {
+    font-size: 50px;
     margin: 0;
 }
 
-header p {
-    margin-top: 10px;
-    color: #cbd5f5;
+.hero p {
+    color: #ccc;
 }
 
 .btn {
-    display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
     background: #22c55e;
-    color: white;
-    text-decoration: none;
     border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
 }
 
+/* SECTION */
 .section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
+/* SERVICES */
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 20px;
 }
 
@@ -55,8 +61,39 @@ header p {
     background: #1e293b;
     padding: 20px;
     border-radius: 12px;
+    transition: 0.3s;
 }
 
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* WHATSAPP BUTTON */
+.wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -67,37 +104,50 @@ footer {
 
 <body>
 
-<header>
-    <h1>JariKu Massage Therapy</h1>
-    <p>Pijat Kesehatan Profesional ke Rumah Anda</p>
-    <a class="btn" href="https://wa.me/628XXXXXXXXXX">Booking Sekarang</a>
-</header>
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>JariKu Massage</h1>
+        <p>Pijat Kesehatan Profesional ke Rumah Anda</p>
+        <a class="btn" href="https://wa.me/628XXXXXXXXXX">Booking Sekarang</a>
+    </div>
+</div>
 
-<section class="section">
-  <img src="massage2.jpg" style="width:100%; border-radius:12px;">
+<!-- SERVICES -->
+<div class="section">
     <h2>Layanan Kami</h2>
     <div class="services">
         <div class="card">Deep Tissue Massage</div>
         <div class="card">Relaxation Therapy</div>
         <div class="card">Recovery Massage</div>
     </div>
-</section>
+</div>
 
-<section class="section">
+<!-- GALLERY -->
+<div class="section">
+    <h2>Galeri</h2>
+    <div class="gallery">
+        <img src="massage1.jpg">
+        <img src="massage2.jpg">
+        <img src="massage3.jpg">
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
     <h2>Kenapa Pilih JariKu?</h2>
     <p>
     Terapis pria profesional, pelayanan sopan, dan fokus pada pijat kesehatan.
+    Kami memberikan pengalaman relaksasi terbaik langsung ke rumah Anda.
     </p>
-</section>
-
-<section class="section">
-    <h2>Area Layanan</h2>
-    <p>Medan dan sekitarnya</p>
-</section>
+</div>
 
 <footer>
     <p>© 2026 JariKu Massage Therapy</p>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa" href="https://wa.me/628XXXXXXXXXX">💬</a>
 
 </body>
 </html>
